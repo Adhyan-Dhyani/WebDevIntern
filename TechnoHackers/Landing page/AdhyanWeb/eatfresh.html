@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Name" content="">
+    <link rel="stylesheet" href="eatfresh.css">
+    <script>
+    function stickyMenu() {
+        var sticky = document.getElementById('sticky');
+        if (window.pageYOffset > 220) {
+            sticky.classList.add('sticky');
+        } else {
+            sticky.classList.remove('sticky');
+        }
+    }
+    window.onscroll = function() {
+        stickyMenu();
+    }
+    </script>
+</head>
+<body>
+    <div class="parallax">
+        <div class="page-title">VegEazy</div>
+    </div>
+
+    <div class="menu" id="sticky">
+        <ul class="menu-ul">
+            <li><a href="#" class="a-menu">Home</a></li>
+            <li><a href="#" class="a-menu">About</a></li>
+            <li><a href="#" class="a-menu">Deals</a></li>
+            <li><a href="#vegetables" class="a-menu">Vegetables</a></li>
+            <li><a href="#" class="a-menu">Contact us</a></li>
+        </ul>
+        <div class="search-box">
+            <form>
+                <input type="text" placeholder="Search..." name="search" class="search-input">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="#vegetables" class="category-link">
+            <div class="category">
+                <img src="Images/capsicum.jpg" class="item-image" alt="Capsicum">
+                <div class="image-title">Capsicum</div>
+            </div>
+        </a>
+        <a href="#vegetables" class="category-link">
+            <div class="category">
+                <img src="Images/tomato.jpg" class="item-image" alt="Capsicum">
+                <div class="image-title">Tomato</div>
+            </div>
+        </a>
+        <a href="#vegetables" class="category-link">
+            <div class="category">
+                <img src="Images/cabbage.jpg" class="item-image" alt="Capsicum">
+                <div class="image-title">Cabbage</div>
+            </div>
+        </a>
+        <a href="#vegetables" class="category-link">
+            <div class="category">
+                <img src="Images/brinjal.jpg" class="item-image" alt="Capsicum">
+                <div class="image-title">Brinjal</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="deals-container" id="deals">
+        <div class="parallax">
+            <div class="title">DEALS</div>
+        </div>
+        <div class="deal">
+            Save 20% on min-purchase of Rs 250 on vegetables<br>
+            <a href="#"></a><button class="coupon-btn">Add Coupon</button>
+        </div>
+        <div class="deal">
+            Save 45% on min-purchase of Rs 750 on vegetables<br>
+            <a href="#"></a><button class="coupon-btn">Add Coupon</button>
+        </div>
+    </div>
+
+    <div class="vegetables-container" id="vegetables">
+        <div class="parallax">
+            <div class="title">VEGETABLES</div>
+        </div>
+        <div class="item">
+            <div class="image">
+                <img src="Images/okra.jpg" class="item-image" alt="Organic Okra">
+            </div>
+            <div class="description">
+                <b>Organic Okra</b><br>
+                <div class="item-select">
+                    Price: Rs 20/kg
+                </div>
+                <label>Qty:</label>
+                <select class="item-select">
+                    <option>250 grams</option>
+                    <option>500 grams</option>
+                    <option>750 grams</option>
+                    <option>1000 grams</option>
+                </select><br>
+                <button class="buynow-btn">Buy Now</button>
+            </div>
+        </div>
+            <div class="item">
+                <div class="image">
+                    <img src="Images/onion.jpg" class="item-image" alt="Organic Okra">
+                </div>
+                <div class="description">
+                    <b>Organic Onion</b><br>
+                    <div class="item-select">
+                        Price: Rs 20/kg
+                    </div>
+                    <label>Qty:</label>
+                    <select class="item-select">
+                        <option>250 grams</option>
+                        <option>500 grams</option>
+                        <option>750 grams</option>
+                        <option>1000 grams</option>
+                    </select><br>
+                    <button class="buynow-btn">Buy Now</button>
+                </div>
+            </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="Images/spinach.jpg" class="item-image" alt="Organic Okra">
+                    </div>
+                    <div class="description">
+                        <b>Organic Spinach</b><br>
+                        <div class="item-select">
+                            Price: Rs 20/kg
+                        </div>
+                        <label>Qty:</label>
+                        <select class="item-select">
+                            <option>250 grams</option>
+                            <option>500 grams</option>
+                            <option>750 grams</option>
+                            <option>1000 grams</option>
+                        </select><br>
+                        <button class="buynow-btn">Buy Now</button>
+                    </div>
+        </div>
+    </div>
+
+</body>
+</html>

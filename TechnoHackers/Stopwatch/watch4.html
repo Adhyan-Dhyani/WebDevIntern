@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stopwatch</title>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+  }
+
+  .stopwatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    margin: 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  #time {
+    font-size: 3.5rem;
+    margin-top: 1rem;
+    background-color: #333;
+    padding: 15px 30px;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+<div class="stopwatch">
+  <h1>Stopwatch</h1>
+  <p id="time">00:00:00</p>
+  <div class="button-container">
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+  </div>
+</div>
+<script>
+let start = document.getElementById('start');
+let stop = document.getElementById('stop');
+let reset = document.getElementById('reset');
+let time = document.getElementById('time');
+let seconds = 0;
+let minutes = 0;
+let hours = 0;
+let t;
+let isRunning = false;
+
+function updateDisplay() {
+  time.innerHTML = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
+
+function incrementTime() {
+  seconds++;
+  if (seconds >= 60) {
+    seconds = 0;
+    minutes++;
+    if (minutes >= 60) {
+      minutes = 0;
+      hours++;
+    }
+  }
+  updateDisplay();
+}
+
+function startTimer() {
+  if (!isRunning) {
+    t = setInterval(incrementTime, 1000);
+    isRunning = true;
+    start.disabled = true;
+    stop.disabled = false;
+  }
+}
+
+function stopTimer() {
+  clearInterval(t);
+  isRunning = false;
+  start.disabled = false;
+  stop.disabled = true;
+  start.textContent = "Resume";
+}
+
+function resetTimer() {
+  clearInterval(t);
+  isRunning = false;
+  start.disabled = false;
+  stop.disabled = true;
+  seconds = 0;
+  minutes = 0;
+  hours = 0;
+  updateDisplay();
+  start.textContent = "Start";
+}
+
+start.addEventListener('click', startTimer);
+stop.addEventListener('click', stopTimer);
+reset.addEventListener('click', resetTimer);
+
+// Initial UI setup
+stop.disabled = true;
+updateDisplay();
+</script>
+</body>
+</html>

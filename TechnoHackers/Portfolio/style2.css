@@ -1,0 +1,122 @@
+body {
+  font-family: 'Helvetica', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+header {
+  background-image: url('bg.jpg');
+  /*background-color: #3498db;*/
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0;
+}
+header p {
+  font-size: 1.5rem;
+  opacity: 1;
+  color: #d1d1d1;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  background-color: #2980b9;
+  list-style-type: none;
+  margin: 0;
+  padding: 1.5rem 0;
+}
+
+nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+  margin: 0 2rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #e74c3c;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: #3498db;
+}
+
+p {
+  line-height: 1.7;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+ul {
+  list-style: disc;
+  line-height: 1.7;
+  font-size: 1.2rem;
+  padding-left: 2rem;
+  color: #555;
+}
+
+.project {
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+/* Add some hover effects to navigation links */
+nav a:hover {
+  color: #e74c3c;
+}
+
+/* Add a glow effect to project cards on hover */
+.project:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for contact information */
+#contact ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#contact li {
+  margin: 10px 0;
+}
+
+/* Add a glowing animation to header */
+header {
+  animation: glowHeader 3s ease infinite alternate;
+}
+
+@keyframes glowHeader {
+  from {
+    background-color: #3498db;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  to {
+    background-color: #2980b9;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+}

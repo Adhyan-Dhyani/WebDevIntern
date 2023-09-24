@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <title>Portfolio - Adhyan Dhyani</title>
+</head>
+<body>
+  <header>
+    <h1>Adhyan Dhyani</h1>
+    <p>Portfolio</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am Adhyan Dhyani, currently pursuing a B.Tech degree in Computer Science from Graphic Era University in Dehradun, Uttarakhand. I am highly passionate about web development. I have hands-on experience with HTML, CSS, JavaScript, ReactJS, NodeJs, and Python. I am eager and committed to continuing my learning journey to further enhance my skills and knowledge in the field.</p>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML5, CSS, JavaScript</li>
+        <li>React, Express</li>
+        <li>C, C++, JAVA, Python</li>
+        <li>Database Management (SQL, MongoDB, Oracle)</li>
+      </ul>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project" onmouseover="glow(this)" onmouseout="stopGlow(this)">
+        <h3>Portfolio Website</h3>
+        <p>Showcasing my skills, experience, and projects in an interactive way.</p>
+      </div>
+      <div class="project" onmouseover="glow(this)" onmouseout="stopGlow(this)">
+        <h3>E-Commerce Website</h3>
+        <p>Developed an e-commerce platform for grocery shopping.</p>
+      </div>
+      <div class="project" onmouseover="glow(this)" onmouseout="stopGlow(this)">
+        <h3>Pokemon Minigame</h3>
+        <p>Developed a Web game with 12 pairs of Pokemon Cards. Turn 2 cards at a time to find identical pairs.</p>
+      </div>
+      <div class="project" onmouseover="glow(this)" onmouseout="stopGlow(this)">
+        <h3>Quiz System</h3>
+        <p>Developed a quiz system using JAVA(JDBC) with a basic GUI.</p>
+      </div>
+      <div class="project" onmouseover="glow(this)" onmouseout="stopGlow(this)">
+        <h3>Hospital Management System</h3>
+        <p>Made a Hospital Management System using JAVA for inpatients, outpatients, records, treatments, and illness status.</p>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <h3>Let's connect! Reach me through</h3>
+      <ul>
+        <li>Phone: 708****566, 941****688</li>
+        <li>Email: adhyan.28star@gmail.com</li>
+        <li>Address: Dehradun, Uttarakhand</li>
+      </ul>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; Adhyan Dhyani. All rights reserved.</p>
+  </footer>
+  <script>
+    function glow(element) {
+      element.style.boxShadow = "0 8px 16px rgba(0, 0, 0, 0.2)";
+    }
+
+    function stopGlow(element) {
+      element.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+    }
+  </script>
+</body>
+</html>
