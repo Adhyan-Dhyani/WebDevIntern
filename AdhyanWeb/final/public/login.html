@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="login-css.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+</head>
+
+<body>
+  <div id="login-container">
+    <h1>Login Page</h1>
+    <form id="login-form">
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <a href="new_user.html" id="new-user">New User?</a>
+    <a href="#" id="forgot-password-link">Forgot Password?</a>
+  </div>
+
+  <script>
+    document.getElementById("login-form").addEventListener("submit", async function (event) {
+      event.preventDefault();
+      const username = document.querySelector("input[name='username']").value;
+      const password = document.querySelector("input[name='password']").value;
+
+      try {
+        const response = await fetch('/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ username, password })
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+          alert("Login successful!");
+          localStorage.setItem('token', data.token); 
+          window.location.href = "#"; 
+        } else {
+          alert(data.message || "Invalid username or password. Please try again.");
+        }
+      } catch (error) {
+        alert("An error occurred. Please try again.");
+      }
+    });
+
+    document.getElementById("forgot-password-link").addEventListener("click", function (event) {
+      event.preventDefault();
+      const username = prompt("Enter your username to reset the password:");
+      if (username) {
+       
+        alert("Password reset link has been sent to " + username + ". Please check your email.");
+      }
+    });
+  </script>
+</body>
+
+</html>

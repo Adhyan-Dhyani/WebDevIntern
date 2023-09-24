@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta Name="Author" Content="">
+  <meta Name="Keywords" Content="">
+  <meta Name="Name" Content="">
+  <link rel="stylesheet" href="home-page.css" />
+  <link rel="stylesheet" href="home-page-copyrights.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/2207fa3cff.js" crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+</head>
+<style>
+  /* Style for the Remove button to make it bold */
+  .remove-button {
+    font-weight: bold;
+  }
+</style>
+<body>
+  <div class="parallax">
+    <div class="page-title">
+      <a href="#"><img width="150px" height="150px" src="images/logo61.png" class="main-logo" alt=""></a>
+      <div>VegEazy</div>
+    </div>
+  </div>
+  <div class="menu" id="sticky">
+    <ul class="menu-ul">
+      <a href="firstpage.html" class="a-menu"><li>Home</li></a>
+      <a href="contact.html" class="a-menu"><li>Contact us</li></a>
+      <a href="login.html" class="a-menu"><li>Login/Register</li></a>
+    </ul>
+    <div class="search-box">
+      <form>
+        <input type="text" placeholder="Search..." name="search" class="search-input" />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+    <a href="cart2.html" class="menu-ul" id="cart" style="color: white; margin-left:10px;"><i
+        class="fa fa-cart-shopping"></i></a> <!-- Link to the cart page -->
+  </div>
+
+  <div class="container">
+    <a href="#vegetables">
+      <div class="categories">
+        <img height="100px" src="images/capsicum.png" class="item image" />
+        <div class="image-title"></div>
+      </div>
+    </a>
+    <a href="#vegetables">
+      <div class="categories">
+        <img height="100px" src="images/tomato2.png" class="item image" />
+        <div class="image-title"></div>
+      </div>
+    </a>
+    <a href="#vegetables">
+      <div class="categories">
+        <img height="100px" src="images/cabbage.png" class="item image" />
+        <div class="image-title"></div>
+      </div>
+    </a>
+    <a href="#vegetables">
+      <div class="categories">
+        <img height="100px" src="images/brinjal1.png" class="item image" />
+        <div class="image-title"></div>
+      </div>
+    </a>
+  </div>
+
+  <div class="deals-container" id="deals">
+    <div class="parallax">
+      <div class="title">DEALS</div>
+    </div>
+
+    <div class="deal">
+      Save 20% on min-purchase of Rs 250 on vegetables<br />
+      <button class="coupon-btn">Add Coupon</button>
+    </div>
+
+    <div class="deal">
+      Save 30% on min-purchase of Rs 750 on vegetables<br />
+      <button class="coupon-btn">Add Coupon</button>
+    </div>
+  </div>
+
+  <div class="deals-container" id="vegetables">
+    <div class="parallax">
+      <div class="title">Organically Grown</div>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-info">
+      <img src="images/beetroot.jpeg" alt="Vegetable 1" class="menu-item-image">
+      <div class="item-name">Beetroot</div>
+      <div class="item-price">50 Rs/kg</div>
+      <button class="cart-button" onclick="addToCart('Beetroot')">Add to Cart</button>
+      <button class="remove-button" data-vegetable="Beetroot" onclick="removeFromCart('Beetroot')">Remove</button>
+      <div class="cart-quantity" data-vegetable="Beetroot">Quantity: 0</div>
+    </div>
+
+    <div class="item-info">
+      <img src="images/veg2.jpeg" alt="Vegetable 2" class="menu-item-image">
+      <div class="item-name">Onions</div>
+      <div class="item-price">40 Rs/kg</div>
+      <button class="cart-button" onclick="addToCart('Onions')">Add to Cart</button>
+      <div class="cart-quantity" data-vegetable="Onions">Quantity: 0</div>
+    </div>
+
+    <div class="item-info">
+      <img src="images/veg6.jpeg" alt="Vegetable 3" class="menu-item-image">
+      <div class="item-name">Brinjal</div>
+      <div class="item-price">30 Rs/kg</div>
+      <button class="cart-button" onclick="addToCart('Brinjal')">Add to Cart</button>
+      <div class="cart-quantity" data-vegetable="Brinjal">Quantity: 0</div>
+    </div>
+
+    <div class="item-info">
+      <img src="images/tomato2.png" alt="Vegetable 3" class="menu-item-image">
+      <div class="item-name">Tomato</div>
+      <div class="item-price">80 Rs/kg</div>
+      <button class="cart-button" onclick="addToCart('Tomato')">Add to Cart</button>
+      <div class="cart-quantity" data-vegetable="Tomato">Quantity: 0</div>
+    </div>
+
+    <div class="item-info">
+      <img src="images/capsicum.png" alt="Vegetable 3" class="menu-item-image">
+      <div class="item-name">Capsicum</div>
+      <div class="item-price">50 Rs/kg</div>
+      <button class="cart-button" onclick="addToCart('Capsicum')">Add to Cart</button>
+      <div class="cart-quantity" data-vegetable="Capsicum">Quantity: 0</div>
+    </div>
+
+    <div class="item-info">
+      <img src="images/celery.png" alt="Vegetable 4" class="menu-item-image">
+      <div class="item-name">Celery</div>
+      <div class="item-price">20 Rs/kg</div>
+      <button class="cart-button" onclick="addToCart('Celery')">Add to Cart</button>
+      <div class="cart-quantity" data-vegetable="Celery">Quantity: 0</div>
+    </div>
+
+    <div class="item-info">
+      <img src="images/radicchio.png" alt="Vegetable 5" class="menu-item-image">
+      <div class="item-name">Radicchio</div>
+      <div class="item-price">80 Rs/kg</div>
+      <button class="cart-button" onclick="addToCart('Radicchio')">Add to Cart</button>
+      <div class="cart-quantity" data-vegetable="Radicchio">Quantity: 0</div>
+    </div>
+
+    <div class="item-info">
+      <img src="images/pumpkin.png" alt="Vegetable 6" class="menu-item-image">
+      <div class="item-name">Pumpkin</div>
+      <div class="item-price">45 Rs/kg</div>
+      <button class="cart-button" onclick="addToCart('Pumpkin')">Add to Cart</button>
+      <div class="cart-quantity" data-vegetable="Pumpkin">Quantity: 0</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <h3>VegEazy</h3>
+      <div>
+        Contact Us:
+        +91-7906273348
+        +91-9631743321</br>
+        Email-id: VegEazy@gmail.com
+      </div>
+
+      <ul class="socials">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>copyright &copy;2023 . designed by <span>Big Brains</span></p>
+    </div>
+  </footer>
+</body>
+
+</html>

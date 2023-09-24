@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="cart2.css">
+  <script src="scripts.js"></script> <!-- Include scripts.js here -->
+</head>
+
+<body>
+  <header>
+    <div class="menu" id="sticky">
+      <ul class="menu-ul">
+        <a href="firstpage.html" class="a-menu"><li>Home</li></a>
+        <a href="contact.html" class="a-menu"><li>Contact us</li></a>
+        <a href="login.html" class="a-menu"><li>Login/Register</li></a>
+      </ul>
+      <a href="cart2.html" class="menu-ul" id="cart" style="color: white; margin-left:10px;"><i
+          class="fa fa-cart-shopping"></i></a> <!-- Link to the cart page -->
+    </div>
+  </header>
+
+  <main>
+    <div class="cart-container">
+      <!-- Cart items will be displayed here -->
+    </div>
+    <div class="buy-now-button">
+      <button onclick="buyNow()" class="styled-button">Buy Now</button>
+    </div>
+  </main>
+
+  <footer>
+    <!-- Include the footer from homepage.html if needed -->
+    <div class="footer-content">
+      <h3>VegEazy</h3>
+      <div>
+        Contact Us:
+        +91-7906273348
+        +91-9631743321
+        Email-id: VegEazy@gmail.com
+      </div>
+
+      <ul class="socials">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>copyright &copy;2023 . designed by <span>Big Brains</span></p>
+    </div>
+  </footer>
+  <script>
+    // Define the buyNow function here
+    function buyNow() {
+      // Display a "Thank you for purchasing" message
+      alert("Thank you for purchasing!");
+    }
+  </script>
+</body>
+
+</html>

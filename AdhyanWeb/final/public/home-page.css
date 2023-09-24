@@ -1,0 +1,237 @@
+body{
+    margin:0;
+    font-family:system-ui;
+}
+.parallax{
+    background-image:url('images/veggies.png');
+    height:max-content;
+    background-attachment:fixed;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.main-logo{
+    padding-top: 0px;
+    padding-right:70px ;
+    float: left;
+}
+
+.menu-logo:hover{
+    border:1px solid #cee397;
+    box-shadow: #cee397;
+}
+.page-title{
+    background:#1e1e1e;
+    text-align:center;
+    color:white;
+    padding:50px;
+    font-size:100px;
+    font-family:fantasy;
+    letter-spacing:20px;
+}
+.sticky{
+    position:fixed;
+    top:0;
+    width:100%;
+}
+.menu{
+    background: #184d47;
+    text-align:center;
+    box-sizing:content-box;
+}
+.menu-ul{
+    margin:0;
+    padding:0;
+    display:inline;
+}
+.menu-ul li{
+    font-size:17px;
+    list-style:none;
+    display:inline-block;
+    padding:25px 25px 26px 25px;
+}
+.a-menu{
+    text-decoration:none;
+    color:white;
+}
+.menu-ul li:hover{
+    background-color:rgb(249, 230, 153);
+    transform:scale(1.1);
+}
+#cart:hover{
+    transform:scale(1.1);
+}
+.search-box{
+    border:1px solid white;
+    border-radius:50px;
+    background:white;
+    width:max-content;
+    display:inline-block;
+    margin:8px;
+}
+.search-box:hover{
+    box-shadow:0 0 10px 2px #5b8c5a;
+    border:1px solid #5b8c5a;
+}
+.search-input{
+    width:250px;
+    border:none;
+    font-size:16px;
+    outline:none;
+    background:transparent;
+    margin:15px 0 0 10px;
+}
+i{
+    font-size:20px;
+    margin:0 10px 0 0;
+
+}
+button{
+    background:transparent;
+    border:none;
+    outline:none;
+}
+.container{
+    margin:30px 5px 20px 5%;
+    width:90%;
+    text-align:center;
+}
+.deals-container{
+    /* margin:30px 5px 20px 5%; */
+    margin-top:10px;
+    /* margin-left:40px ; */
+    width:100%;
+    text-align:center;
+}
+.categories{
+    width:max-content;
+    margin:0px 45px 0px 45px;
+    display: inline-block;
+}
+.categories:hover{
+    transform:scale(1.5);
+}
+.item-image{
+    height:200px;
+    width:350px;
+    /* border-radius:50 50 50px 50px; */
+    padding:20px;
+}
+.image-title{
+    text-align:center;
+    padding:10px;
+    font-weight:bold;
+}
+a{
+    text-decoration:none;
+}
+.title{
+    padding:50px;
+    font-size:50px;
+    font-weight:bold;
+    letter-spacing:10px;
+    color:white;
+    height: 100px;
+    background:rgba(0,0,0,0.5);
+}
+.deal{
+    margin:20px 20px 0px 20px;
+    /* margin-top: 20px; */
+    padding:50px;
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+    display:inline-block;
+    width:20%;
+    background:linear-gradient(120deg,#16817a 20%,#cee397 50%, #16817a  80%);
+}
+.coupon-btn{
+    border:1px solid rgb(127, 36, 36);
+    color:white;
+    margin:10px;
+    padding:10px;
+    border-radius:20px;
+}
+.coupon-btn:hover{
+    transition-duration: 1s;
+    background-color: orangered;
+    box-shadow:0 0 10 5px white inset;
+}
+/* old vegetable menu styling */
+/* .item-image-size{
+    height:200px;
+    width:300px;
+    padding:5px;
+} */
+/* .item{
+    background-image:url('images/veggies.png');
+    display: inline;
+    width: 100px;
+} */
+/* .images{
+    display:inline;
+} */
+
+/* .description{
+    margin:20px;
+} */
+/* .item-select{
+    margin:10px 0 0 0;
+} */
+
+.menu-item{
+    text-align: center;
+    /* width: ; */
+    margin-left: 70px;
+    /* display: flex;
+    flex-flow: row wrap; */
+    /* margin-bottom: 100px; */
+}
+.item-info{
+    display: inline-block;
+    border:5px solid #cacfca;
+    border-radius: 5px;
+    box-shadow:5 5 10 5px red;
+    margin: 5px 20px 5px 20px;
+}
+.menu-item-image{
+    height: 220px;
+    width: 270px;
+
+}
+.menu-item:hover{
+    box-shadow:0 0 10 5px white inset;
+}
+.item-info:hover{
+    box-shadow:5 5 10 5px red;
+}
+.cart-button{
+    align-content: center;
+    text-align: center;
+    font-size:15px;
+    font-weight:bold;
+    color: white;
+    background-color: rgb(254, 117, 68);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.cart-button:hover{
+    transition-duration: 1s;
+    background-color: orangered;
+    transform:scale(1.1);
+
+}
+.buynow-btn{
+    border:1px solid #184d47;
+    background:#184d47;
+    padding:5px 15px;
+    border-radius:20px;
+    font-weight:bold;
+    margin-top:10px;
+    color:white;
+}
+.buynow-btn:hover{
+    border:1px solid #5b8c5a;
+    box-shadow:0 0 10px 5px #5b8c5a inset;
+}

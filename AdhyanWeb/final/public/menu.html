@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vegetable Market - Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .item-image {
+            width: 120px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        .item-info {
+            flex: 1;
+        }
+        .item-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .item-price {
+            font-size: 18px;
+        }
+        button {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the VegEazy!</h1>
+    <div class="menu-item">
+        <img src="images/veg1.jpeg" alt="Vegetable 1" class="item-image">
+        <div class="item-info">
+            <div class="item-name">Beetroot</div>
+            <div class="item-price">$1.99 per pound</div>
+            <button onclick="addToCart('Beetroot', 1.99)">Add to Cart</button>
+        </div>
+    </div>
+    <div class="menu-item">
+        <img src="images/veg2.jpeg" alt="Vegetable 2" class="item-image">
+        <div class="item-info">
+            <div class="item-name">Onions</div>
+            <div class="item-price">$2.49 per pound</div>
+            <button onclick="addToCart('Onions', 2.49)">Add to Cart</button>
+        </div>
+    </div>
+    <div class="menu-item">
+        <img src="images/veg6.jpeg" alt="Vegetable 3" class="item-image">
+        <div class="item-info">
+            <div class="item-name">Brinjal</div>
+            <div class="item-price">$1.79 per pound</div>
+            <button onclick="addToCart('Brinjal', 1.79)">Add to Cart</button>
+        </div>
+    </div>
+    <!-- Add more vegetable items here -->
+    <button onclick="goToCart()">View Cart</button>
+
+    <script>
+        function addToCart(item, price) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || {};
+            if (cart[item]) {
+                cart[item].quantity += 1;
+            } else {
+                cart[item] = { price: price, quantity: 1 };
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function goToCart() {
+            window.location.href = "cart1.html";
+        }
+    </script>
+</body>
+</html>

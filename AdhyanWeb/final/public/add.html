@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vegetable Market - Add Items</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .product {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .product span {
+            margin-right: 10px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vegetable Market - Add Items</h1>
+    <div class="products">
+        <div class="product">
+            <span>Carrot</span>
+            <button class="decrease" onclick="changeQuantity('carrot', -1)">-</button>
+            <span id="carrotQuantity">0</span>
+            <button class="increase" onclick="changeQuantity('carrot', 1)">+</button>
+            <span id="carrotPrice">Price: $2</span>
+        </div>
+        <div class="product">
+            <span>Tomato</span>
+            <button class="decrease" onclick="changeQuantity('tomato', -1)">-</button>
+            <span id="tomatoQuantity">0</span>
+            <button class="increase" onclick="changeQuantity('tomato', 1)">+</button>
+            <span id="tomatoPrice">Price: $3</span>
+        </div>
+        <!-- Add more vegetable products here -->
+    </div>
+
+    <a href="pqr.html">View Cart</a>
+
+    <script>
+        const prices = {
+            carrot: 2,
+            tomato: 3,
+            // Add more vegetables and their prices here
+        };
+
+        function updateQuantityDisplay(item, quantity) {
+            const itemQuantityElement = document.getElementById(item + 'Quantity');
+            const itemPriceElement = document.getElementById(item + 'Price');
+
+            itemQuantityElement.textContent = quantity;
+            const price = prices[item] * quantity;
+            itemPriceElement.textContent = `Price: $${price}`;
+        }
+
+        function changeQuantity(item, change) {
+            const itemQuantityElement = document.getElementById(item + 'Quantity');
+            let quantity = parseInt(itemQuantityElement.textContent) + change;
+            if (quantity < 0) quantity = 0;
+            updateQuantityDisplay(item, quantity);
+
+            // Update cart in localStorage
+            const cart = JSON.parse(localStorage.getItem('cart')) || {};
+            cart[item] = quantity;
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    </script>
+</body>
+</html>

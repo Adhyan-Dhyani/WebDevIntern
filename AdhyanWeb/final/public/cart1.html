@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vegetable Market - Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .item-image {
+            width: 120px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        .item-info {
+            flex: 1;
+        }
+        .item-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .item-price {
+            font-size: 18px;
+        }
+        button {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <div id="cartItems">
+    </div>
+    <p>Total: $<span id="cartTotal">0</span></p>
+    <button onclick="clearCart()">Clear Cart</button>
+    <button onclick="checkout()">Buy Now</button>
+
+    <script>
+        function updateCart() {
+            const cartItemsElement = document.getElementById('cartItems');
+            const cartTotalElement = document.getElementById('cartTotal');
+
+            const cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+            let cartHTML = '';
+            let total = 0;
+
+            Object.entries(cart).forEach(([item, { price, quantity }]) => {
+                const itemTotal = price * quantity;
+                total += itemTotal;
+                let imageSource = '';
+                if (item === 'Beetroot') {
+                    imageSource = 'images/veg1.jpeg';
+                } else if (item === 'Onions') {
+                    imageSource = 'images/veg2.jpeg';
+                } else if (item === 'Brinjal') {
+                    imageSource = 'images/veg6.jpeg';
+                }
+                // Add the cart item to the HTML
+                cartHTML += `
+                    <div class="cart-item">
+                        <img src="${imageSource}" alt="${item}" class="item-image">
+                        <div class="item-info">
+                            <div class="item-name">${item}</div>
+                            <div class="item-price">$${price} per pound</div>
+                            <div>Quantity: ${quantity}</div>
+                            <div>Total: $${itemTotal}</div>
+                        </div>
+                    </div>`;
+            });
+
+            cartItemsElement.innerHTML = cartHTML;
+            cartTotalElement.textContent = total;
+        }
+
+        function clearCart() {
+            localStorage.removeItem('cart');
+            updateCart();
+        }
+
+        function checkout() {
+            alert('Thank you for your purchase!');
+            clearCart();
+        }
+        updateCart();
+    </script>
+</body>
+</html>

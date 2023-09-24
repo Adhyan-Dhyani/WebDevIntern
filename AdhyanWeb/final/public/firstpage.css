@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgba(0, 0, 0, 0.7) url('images/1.jpg') center center fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container img {
+            opacity: 0.7; 
+        }
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.container h1{
+    color: orangered;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    display: inline-block;
+    padding: 18px;
+    text-transform: uppercase;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 4px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover{
+    box-shadow: 0 3px 50px orangered inset,0 3px 50px orangered inset,
+    0 3px 50px orangered inset,0 3px 50px orangered inset;
+}
+
+.content{
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content h3{
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.content h1{
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.content p{
+    text-align: center;
+    margin-top: 17px;
+}
+
+.search{
+    background-color: orangered;
+    position: fixed;
+    top: 70%;
+    left: 45%;
+    padding: 15px 12px;
+    transform:scale(1.1);
+}
+.search a{
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer{
+    background:rgba(0,0,0,0.5);
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    margin-top: 400px;
+}
+.footer-content {
+    display: flex;
+     flex-wrap: wrap;
+     clear: both;
+    /* flex-direction: column; */
+}
+
+.footer-section {
+    color: azure;
+    width: 48%;
+    margin-bottom: 15px;
+}
+
+.footer-section h4 {
+    color: orangered;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 14px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: azure;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        width: 100%;
+    }
+}
